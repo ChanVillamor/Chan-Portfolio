@@ -1,5 +1,5 @@
 import html from './html.png';
-import css from './css.PNG';
+import css from './css.png';
 import js from './js.png';
 import php from './php.png';
 import react from './react.png'
