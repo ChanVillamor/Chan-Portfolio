@@ -14,6 +14,7 @@ const Nav = () => {
   };
 
   return (
+   
       <header className="absolute z-30 w-full top-0 left-0 px-6">
          <nav className="flex justify-between items-center container">
             <a href="/">
@@ -47,7 +48,7 @@ const Nav = () => {
 
             {/* Mobile Menu - Conditionally rendered based on state */}
             {isMobileMenuOpen && (
-               <ul className="flex flex-col items-start gap-5 absolute top-20 left-0 px-10 w-full py-4 max-lg:flex bg-[rgba(16,16,16,0.8)] ">
+               <ul className="flex flex-col items-start gap-5 absolute top-20 left-0 px-10 w-full py-4 max-lg:flex bg-[rgba(16,16,16,0.9)] ">
                   {navLinks.map((item) => (
                   <li key={item.label}>
                      <a
@@ -61,8 +62,10 @@ const Nav = () => {
                   ))}
                </ul>
             )}
+
          </nav>
       </header>
+
   )
 }
 

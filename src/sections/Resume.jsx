@@ -3,18 +3,19 @@ import { certificates, technologies } from "../constants";
 import { motion } from 'framer-motion';
 
 const Resume = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
 
+  const [selectedImage, setSelectedImage] = useState(null);
   const openModal = (imgSrc) => {
     setSelectedImage(imgSrc);
   };
-
   const closeModal = () => {
     setSelectedImage(null);
   };
 
   return (
-    <section id="resume" className="w-full flex flex-col items-start container pt-16 pb-16 min-h-screen text-poppins text-dirty-white">
+
+    <section id="resume" className="w-full flex flex-col items-start container pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
+
       <motion.div 
         className="flex flex-col gap-12"
         initial={{ opacity: 0, y: 50 }}
@@ -22,8 +23,10 @@ const Resume = () => {
         viewport={{ once: true, amount: 'some' }}  // Only needs part of the element to trigger
         transition={{ duration: 1, ease: "easeOut" }}
         >
-        {/* Education Section */}
-        <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row tracking-widest">
+        
+        <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest">
+
+          {/* Education Section */}
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">EDUCATION</h1>
             <span className="block bg-green-950 rounded w-[146px] h-[4px] md:w-[290px] lg:w-[290px] mt-1"></span>
@@ -36,6 +39,7 @@ const Resume = () => {
               <p className="text-gray font-thin text-sm md:text-lg lg:text-lg">Senior High School within Bacoor Elementary School</p>
             </div>
           </div>
+
           {/* Personal Skills */}
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">PERSONAL SKILLS</h1>
@@ -53,12 +57,13 @@ const Resume = () => {
               </ul>
             </div>
           </div>
+
         </div>
         
         {/* Technologies */}
         <div>
           <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">TECHNOLOGIES</h1>
-          <span className="block bg-green-950 rounded w-[190px] h-[4px] md:w-[385px] lg:w-[385px] mt-1"></span>
+          <span className="block bg-green-950 rounded w-[195px] h-[4px] md:w-[385px] lg:w-[385px] mt-1"></span>
           <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
           <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
             {technologies.map((item, index) => (
@@ -72,7 +77,7 @@ const Resume = () => {
         {/* Certificates */}
         <div>
           <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">CERTIFICATES</h1>
-          <span className="block bg-green-950 rounded w-[190px] h-[4px] md:w-[335px] lg:w-[335px] mt-1"></span>
+          <span className="block bg-green-950 rounded w-[180px] h-[4px] md:w-[355px] lg:w-[355px] mt-1"></span>
           <p className="text-gray text-base font-extralight tracking-wider mt-1">Some certificates I've earned online.</p>
           <ul className="flex flex-wrap gap-8 mt-8">
             {certificates.map((item, index) => (
@@ -99,7 +104,9 @@ const Resume = () => {
           </div>
         </div>
       )}
+      
     </section>
+    
   );
 };
 

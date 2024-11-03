@@ -7,6 +7,7 @@ import {
    tech,
    travel
 } from '../assets/interest-icon'
+
 // technologies
 import {
    html,
@@ -16,6 +17,7 @@ import {
    react,
    tailwind,
 } from '../assets/tech-icon'
+
 // certificates
 import {
    cert1,
@@ -23,6 +25,7 @@ import {
    cert3,
    cert4
 } from '../assets/certificates'
+
 // project
 import {
    calculator,
@@ -31,7 +34,7 @@ import {
    quote,
 } from '../assets/project-img'
 
-
+// navLinks
 export const navLinks = [
    { href: "#home", label: "Home" },
    { href: "#about", label: "About Me" },
@@ -40,6 +43,7 @@ export const navLinks = [
    { href: "#contact", label: "Contact" },
 ];
 
+// interests
 export const interest = [
    {interestImg: volleyball},
    {interestImg: music},
@@ -49,6 +53,7 @@ export const interest = [
    {interestImg: travel}
 ]
 
+// tehnologies/skills
 export const technologies = [
    {techImg: html},
    {techImg: css},
@@ -58,6 +63,7 @@ export const technologies = [
    {techImg: tailwind}
 ]
 
+// certificates
 export const certificates = [
    {certImg: cert1},
    {certImg: cert2},
@@ -65,6 +71,7 @@ export const certificates = [
    {certImg: cert4},
 ]
 
+// projects
 export const projects = [
    {
      image: restaurant, // Replace with actual image URL
@@ -85,7 +92,7 @@ export const projects = [
    title: 'Quote Generator',
    description: 'A JavaScript-powered web-based quote generator that uses an array list to display inspiring quotes.',
    githubLink: 'https://github.com/ChanVillamor/learning-DOM---JS/tree/main/PR1%20Quote%20generator%20js',
-   demoLink: 'https://chanvillamor.github.io/pizzalicious-website/',
+   demoLink: 'https://chanvillamor.github.io/learning-DOM---JS/PR1%20Quote%20generator%20js/',
    },
  ];
  

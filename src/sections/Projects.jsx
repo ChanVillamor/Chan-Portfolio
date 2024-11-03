@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 
 const Projects = () => {
   return (
+
     <section id="projects" className="w-full flex flex-col justify-center items-start container pt-16 pb-16 min-h-screen">
+
       <motion.div 
         className='flex flex-wrap flex-col gap-8'
         initial={{ opacity: 0, y: 50 }}
@@ -17,7 +19,9 @@ const Projects = () => {
           <span className="block bg-green-950 rounded w-[125px] h-[4px] md:w-[245px] lg:w-[245px] mt-1"></span>
           <p className="text-gray text-base font-extralight tracking-wider mt-1">These are a few simple projects I've worked on.</p>
         </div>
-        <div className="flex flex-wrap gap-6 justify-start">
+
+        {/* project card */}
+        <div className="flex flex-wrap gap-8 justify-start">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -29,8 +33,11 @@ const Projects = () => {
             />
           ))}
         </div>
+
       </motion.div>
+
     </section>
+    
   )
 }
 
