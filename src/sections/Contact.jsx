@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center">
           <div className='text-poppins'>
             <h1 className=" text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Get in touch with me!</h1>
-            <span className="block bg-green-950 rounded w-[270px] h-[4px] md:w-[565px] lg:w-[565px] mt-1"></span>
+            <span className="block bg-green-950 rounded w-[280px] h-[4px] md:w-[565px] lg:w-[565px] mt-1"></span>
           </div>
           <ul className="relative flex flex-col md:flex-row lg:flex-row flex-wrap justify-start gap-5 md:gap-8 lg:gap-16 ">
             <div className="flex flex-col items-center">
@@ -42,8 +42,8 @@ const Contact = () => {
         {/* social contact */}
         <div className="flex flex-col gap-5 items-center md:gap-16 lg:gap-16 mt-6">
           <div className=''>
-            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Connect with me here!</h1>
-            <span className="block bg-green-950 rounded w-[280px] h-[4px] md:w-[600px] lg:w-[600px] mt-1"></span>
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Connect with me!</h1>
+            <span className="block bg-green-950 rounded w-[235px] h-[4px] md:w-[470px] lg:w-[470px] mt-1"></span>
           </div>
           <ul className="relative flex justify-start gap-5 md:gap-8 lg:gap-8">
             <li><a href="https://www.instagram.com/booshaiderr?igsh=NTRjemoyc2wxdXF6"><FaInstagram className="text-3xl md:text-4xl lg:text-4xl  hover:text-green-500 hover:duration-200"/></a></li>

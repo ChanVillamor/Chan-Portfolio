@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
 
-    <section id="about" className="w-full flex flex-col items-start container pt-16 pb-16 min-h-screen font-poppins text-dirty-white">
+    <section id="about" className="w-full flex flex-col justify-center items-center container pt-16 pb-16 min-h-screen font-poppins text-dirty-white">
 
       <motion.div 
         className="flex flex-col gap-12"
@@ -22,9 +22,9 @@ const About = () => {
           <div className='flex flex-col'>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">ABOUT ME</h1>
             <span className="block bg-green-950 rounded w-[135px] h-[4px] md:w-[265px] lg:w-[265px] mt-1"></span>
-            <p className="text-gray text-[0.9em] font-extralight tracking-wider mt-1">chanmichaelespinavillamor@gmail.com</p>
-            <p className="text-gray text-lg font-normal tracking-wide mt-10 w-full lg:w-[600px] text-justify leading-snug">
-              Hi, I'm Chan Villamor, an aspiring UI/UX designer and software engineer. I have a passion for creating intuitive, user-friendly interfaces and bringing them to life through clean, efficient code. My goal is to design, solve and develop seamless digital experiences that blend functionality with aesthetics.
+            <p className="text-gray text-[0.8em] md:text-base lg:text-base font-extralight tracking-wider mt-1">chanmichaelespinavillamor@gmail.com</p>
+            <p className="text-gray text-[1em] md:text-lg lg:text-lg font-normal tracking-wide mt-10 w-full lg:w-[600px] text-justify leading-snug">
+            👋 Hi! I’m Chan Villamor, a 3rd-year Computer Science student with a passion for UI/UX design and software engineering. I love creating intuitive, user-centered interfaces and developing digital experiences that are both seamless and visually appealing. I’m driven by the challenge of blending design with development to build solutions that are as effective as they are engaging. Excited to connect and create something amazing! ✨
             </p>
           </div>
 

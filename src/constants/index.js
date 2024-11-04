@@ -18,6 +18,13 @@ import {
    tailwind,
 } from '../assets/tech-icon'
 
+// design tools
+import {
+   figma,
+   canva,
+   pinterest,
+} from "../assets/tools-icon"
+
 // certificates
 import {
    cert1,
@@ -61,6 +68,13 @@ export const technologies = [
    {techImg: php},
    {techImg: react},
    {techImg: tailwind}
+]
+
+// tools/skills
+export const tools = [
+   {toolImg: figma},
+   {toolImg: canva},
+   {toolImg: pinterest},
 ]
 
 // certificates

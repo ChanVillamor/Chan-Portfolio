@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { certificates, technologies } from "../constants";
+import { certificates, technologies, tools } from "../constants";
 import { motion } from 'framer-motion';
 
 const Resume = () => {
@@ -14,22 +14,21 @@ const Resume = () => {
 
   return (
 
-    <section id="resume" className="w-full flex flex-col items-start container pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
+    <section id="resume" className="w-full flex justify-center items-center pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
 
       <motion.div 
-        className="flex flex-col gap-12"
+        className="container flex flex-col gap-12" // Ensure the container is centered
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 'some' }}  // Only needs part of the element to trigger
+        viewport={{ once: true, amount: 'some' }} // Only needs part of the element to trigger
         transition={{ duration: 1, ease: "easeOut" }}
-        >
-        
+      >
         <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest">
 
           {/* Education Section */}
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">EDUCATION</h1>
-            <span className="block bg-green-950 rounded w-[146px] h-[4px] md:w-[290px] lg:w-[290px] mt-1"></span>
+            <span className="block bg-green-950 rounded w-[146px] h-[4px] md:w-[300px] lg:w-[300px] mt-1"></span>
             <div className="mt-4 text-lg font-normal md:text-xl lg:text-2xl">
               <h6>BS Computer Science</h6>
               <p className="text-gray font-thin text-sm md:text-lg lg:text-lg">Cavite State University - Bacoor Campus</p>
@@ -60,18 +59,34 @@ const Resume = () => {
 
         </div>
         
-        {/* Technologies */}
-        <div>
-          <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">TECHNOLOGIES</h1>
-          <span className="block bg-green-950 rounded w-[195px] h-[4px] md:w-[385px] lg:w-[385px] mt-1"></span>
-          <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
-          <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
-            {technologies.map((item, index) => (
-              <li key={index} className="flex flex-col items-center">
-                <img src={item.techImg} alt={item.label} className="w-12 h-12 object-cover" />
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest">
+          {/* Technologies */}
+          <div>
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">TECHNOLOGIES</h1>
+            <span className="block bg-green-950 rounded w-[195px] h-[4px] md:w-[385px] lg:w-[385px] mt-1"></span>
+            <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
+            <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
+              {technologies.map((item, index) => (
+                <li key={index} className="flex flex-col items-center">
+                  <img src={item.techImg} alt={item.label} className="w-12 h-12 object-cover" />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Design Tools */}
+          <div>
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">DESIGN TOOLS</h1>
+            <span className="block bg-green-950 rounded w-[185px] h-[4px] md:w-[370px] lg:w-[370px] mt-1"></span>
+            <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
+            <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
+              {tools.map((item, index) => (
+                <li key={index} className="flex flex-col items-center">
+                  <img src={item.toolImg} alt={item.label} className="w-12 h-12 object-cover" />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         
         {/* Certificates */}
@@ -104,8 +119,8 @@ const Resume = () => {
           </div>
         </div>
       )}
-      
     </section>
+
     
   );
 };

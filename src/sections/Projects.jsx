@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   return (
 
-    <section id="projects" className="w-full flex flex-col justify-center items-start container pt-16 pb-16 min-h-screen">
+    <section id="projects" className="w-full flex flex-col justify-center items-center container pt-16 pb-16 min-h-screen">
 
       <motion.div 
         className='flex flex-wrap flex-col gap-8'
