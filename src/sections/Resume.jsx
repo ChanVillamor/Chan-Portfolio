@@ -14,10 +14,10 @@ const Resume = () => {
 
   return (
 
-    <section id="resume" className="w-full flex justify-center items-center pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
+    <section id="resume" className="w-full container m-auto flex flex-col justify-center items-center pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
 
       <motion.div 
-        className="container flex flex-col gap-12" // Ensure the container is centered
+        className="flex flex-col gap-12" 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 'some' }} // Only needs part of the element to trigger
@@ -90,11 +90,13 @@ const Resume = () => {
         </div>
         
         {/* Certificates */}
-        <div>
-          <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">CERTIFICATES</h1>
-          <span className="block bg-green-950 rounded w-[180px] h-[4px] md:w-[355px] lg:w-[355px] mt-1"></span>
-          <p className="text-gray text-base font-extralight tracking-wider mt-1">Some certificates I've earned online.</p>
-          <ul className="flex flex-wrap gap-8 mt-8">
+        <div className="flex flex-col justify-center">
+          <div>
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">CERTIFICATES</h1>
+            <span className="block bg-green-950 rounded w-[180px] h-[4px] md:w-[355px] lg:w-[355px] mt-1"></span>
+            <p className="text-gray text-base font-extralight tracking-wider mt-1">Some certificates I've earned online.</p>
+          </div>
+          <ul className="flex flex-wrap gap-8 mt-8 justify">
             {certificates.map((item, index) => (
               <li key={index} className="flex flex-col items-center">
                 <img

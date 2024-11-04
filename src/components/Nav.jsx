@@ -15,8 +15,8 @@ const Nav = () => {
 
   return (
    
-      <header className="absolute z-30 w-full top-0 left-0 px-6">
-         <nav className="flex justify-between items-center gap-16 container lg:padding ">
+      <header className="absolute z-30 w-full top-0 left-0 padding">
+         <nav className="flex justify-between items-center gap-16 container lg:padding">
             <a href="/">
                <img 
                   src={headerLogo} 
@@ -25,7 +25,7 @@ const Nav = () => {
                />
             </a>
 
-            <ul className="flex gap-16 max-lg:hidden">
+            <ul className="flex gap-12 max-lg:hidden">
                {navLinks.map((item) => (
                   <li key={item.label}>
                      <a
