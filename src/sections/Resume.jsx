@@ -96,7 +96,7 @@ const Resume = () => {
             <span className="block bg-green-950 rounded w-[180px] h-[4px] md:w-[355px] lg:w-[355px] mt-1"></span>
             <p className="text-gray text-base font-extralight tracking-wider mt-1">Some certificates I've earned online.</p>
           </div>
-          <ul className="flex flex-wrap gap-8 mt-8 justify-start">
+          <ul className="flex flex-wrap gap-4 mt-8 justify-start">
             {certificates.map((item, index) => (
               <li key={index} className="flex flex-col items-center">
                 <img

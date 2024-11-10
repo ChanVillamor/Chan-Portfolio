@@ -48,7 +48,7 @@ const Nav = () => {
 
             {/* Mobile Menu - Conditionally rendered based on state */}
             {isMobileMenuOpen && (
-               <ul className="flex flex-col items-start gap-5 absolute top-20 left-0 px-10 md:px-20 w-full py-4 max-lg:flex bg-[rgba(16,16,16,0.9)] ">
+               <ul className="flex flex-col items-start gap-4   absolute top-20 left-0 px-10 md:px-20 w-full py-4 max-lg:flex bg-[rgba(16,16,16,0.9)] ">
                   {navLinks.map((item) => (
                   <li key={item.label}>
                      <a

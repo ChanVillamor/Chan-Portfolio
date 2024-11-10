@@ -21,7 +21,7 @@ const Projects = () => {
         </div>
 
         {/* project card */}
-        <div className="flex flex-wrap gap-8 justify-start">
+        <div className="flex flex-wrap gap-4 justify-start">
           {projects.map((project, index) => (
             <ProjectCard
               key={index}

@@ -23,7 +23,4 @@
     @apply sm:px-16 px-8;
   }
 
-  .info-text {
-    @apply font-poppins text-gray text-lg leading-7;
-  }
 }

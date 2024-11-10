@@ -26,7 +26,7 @@ const Home = () => {
         <a href="#contact">
           <Button label="Contact" />
         </a>
-        <a href="/my-portfolio/src/assets/CV.pdf" download="CV.pdf">
+        <a href="./CV.pdf" download="CV.pdf">
           <Button label="Download CV" />
         </a>
 
