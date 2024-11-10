@@ -3,7 +3,7 @@ import { FaXTwitter, FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
 import { IoMailUnread } from "react-icons/io5";
 import { motion } from 'framer-motion';
 import Button from "../components/Button";
-
+import React, { useState } from "react";
 
 const Contact = () => {
 
