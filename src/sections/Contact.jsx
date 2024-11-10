@@ -58,13 +58,13 @@ const Contact = () => {
             </div>
           ) : (
             <form
-              name="contact-form"
+              name="contact"
               method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
               className="w-full max-w-md flex flex-col gap-6"
             >
-              <input type="hidden" name="form-name" value="contact-form" />
+              <input type="hidden" name="form-name" value="contact" />
 
               <div className="flex flex-col gap-4">
                 <label htmlFor="name" className="text-lg font-normal">Your Name</label>
