@@ -14,19 +14,20 @@ const Resume = () => {
 
   return (
 
-    <section id="resume" className="w-full container m-auto flex flex-col justify-center items-center pt-16 pb-16 min-h-screen text-dirty-white font-poppins">
-
-      <motion.div 
-        className="flex flex-col gap-12" 
+    <section
+      id="resume"
+      className="w-full container mx-auto flex flex-col justify-center items-center pt-16 pb-16 text-dirty-white font-poppins"
+    >
+      <motion.div
+        className="flex flex-col gap-12 w-full max-w-5xl mx-auto justify-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 'some' }} // Only needs part of the element to trigger
+        viewport={{ once: true, amount: 'some' }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest">
-
-          {/* Education Section */}
-          <div>
+        {/* Education Section */}
+        <div className="flex flex-col gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest justify-center">
+          <div className="w-full max-w-lg mx-auto">
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">EDUCATION</h1>
             <span className="block bg-green-950 rounded w-[146px] h-[4px] md:w-[300px] lg:w-[300px] mt-1"></span>
             <div className="mt-4 text-lg font-normal md:text-xl lg:text-2xl">
@@ -40,7 +41,7 @@ const Resume = () => {
           </div>
 
           {/* Personal Skills */}
-          <div>
+          <div className="w-full max-w-lg mx-auto">
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">PERSONAL SKILLS</h1>
             <span className="block bg-green-950 rounded w-[222px] h-[4px] md:w-[448px] lg:w-[448px] mt-1"></span>
             <div className="flex flex-row gap-8 mt-4 text-lg font-normal md:text-xl lg:text-2xl">
@@ -56,12 +57,11 @@ const Resume = () => {
               </ul>
             </div>
           </div>
-
         </div>
-        
-        <div className="flex flex-col flex-wrap gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest">
-          {/* Technologies */}
-          <div>
+
+        {/* Technologies Section */}
+        <div className="flex flex-col gap-8 md:flex-row lg:flex-row lg:gap-16 tracking-widest justify-center">
+          <div className="w-full max-w-lg mx-auto">
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">TECHNOLOGIES</h1>
             <span className="block bg-green-950 rounded w-[195px] h-[4px] md:w-[385px] lg:w-[385px] mt-1"></span>
             <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
@@ -74,9 +74,9 @@ const Resume = () => {
             </ul>
           </div>
 
-          {/* Design Tools */}
-          <div>
-            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">DESIGN TOOLS</h1>
+          {/* Design Tools Section */}
+          <div className="w-full max-w-lg mx-auto">
+            <h1 className="text-2xl md:text-4 xl lg:text-4xl font-bold tracking-wider">DESIGN TOOLS</h1>
             <span className="block bg-green-950 rounded w-[185px] h-[4px] md:w-[370px] lg:w-[370px] mt-1"></span>
             <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
             <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
@@ -88,7 +88,7 @@ const Resume = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Certificates */}
         <div className="flex flex-col justify-center">
           <div>
@@ -96,7 +96,7 @@ const Resume = () => {
             <span className="block bg-green-950 rounded w-[180px] h-[4px] md:w-[355px] lg:w-[355px] mt-1"></span>
             <p className="text-gray text-base font-extralight tracking-wider mt-1">Some certificates I've earned online.</p>
           </div>
-          <ul className="flex flex-wrap gap-8 mt-8 justify">
+          <ul className="flex flex-wrap gap-8 mt-8 justify-start">
             {certificates.map((item, index) => (
               <li key={index} className="flex flex-col items-center">
                 <img
@@ -110,6 +110,7 @@ const Resume = () => {
             ))}
           </ul>
         </div>
+
       </motion.div>
 
       {/* Modal */}
@@ -123,7 +124,7 @@ const Resume = () => {
       )}
     </section>
 
-    
+
   );
 };
 
