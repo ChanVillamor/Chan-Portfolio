@@ -7,6 +7,12 @@ import Button from "../components/Button";
 
 const Contact = () => {
 
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormSubmitted(true);
+  };
   
  
   return (
@@ -22,62 +28,71 @@ const Contact = () => {
       >
 
 
-        {/* contact form */}
+        {/* Contact Form */}
         <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center mt-6">
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Contact Me</h1>
             <span className="block bg-green-950 rounded w-[160px] h-[4px] md:w-[305px] lg:w-[305px] mt-1"></span>
           </div>
-          <form
-            name="contact-form"
-            method="POST"
-            data-netlify="true"
-            className="w-full max-w-md flex flex-col gap-6"
-          >
-            <input type="hidden" name="form-name" value="contact-form" />
-            
-            <div className="flex flex-col gap-4">
-              <label htmlFor="name" className="text-lg font-normal">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-                className="p-3 border rounded-lg text-primary text-sm"
-              />
-            </div>
 
-            <div className="flex flex-col gap-4">
-              <label htmlFor="email" className="text-lg font-normal">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-                className="p-3 border rounded-lg text-primary text-sm"
-              />
+          {formSubmitted ? (
+            <div className="text-center">
+              <h2 className="text-xl font-semibold">Message Sent Successfully!</h2>
+              <p>Thank you for reaching out. I will get back to you soon.</p>
+              <a href="/">
+                <Button label="Back to Site" />
+              </a>
             </div>
+          ) : (
+            <form
+              name="contact-form"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+              className="w-full max-w-md flex flex-col gap-6"
+            >
+              <input type="hidden" name="form-name" value="contact-form" />
 
-            <div className="flex flex-col gap-4">
-              <label htmlFor="message" className="text-lg font-normal">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Enter your message"
-                required
-                className="p-3 border rounded-lg text-primary text-sm"
-              />
-            </div>
+              <div className="flex flex-col gap-4">
+                <label htmlFor="name" className="text-lg font-normal">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                  className="p-3 border rounded-lg text-primary text-sm"
+                />
+              </div>
 
-            <Button
-              type="submit"
-              label="Send Message"
-              fullWidth
-           />
-          </form>
-        </div>  
+              <div className="flex flex-col gap-4">
+                <label htmlFor="email" className="text-lg font-normal">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  className="p-3 border rounded-lg text-primary text-sm"
+                />
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <label htmlFor="message" className="text-lg font-normal">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Enter your message"
+                  required
+                  className="p-3 border rounded-lg text-primary text-sm"
+                />
+              </div>
+
+              <Button type="submit" label="Send Message" fullWidth />
+            </form>
+          )}
+        </div>
+
 
         
         {/* personal info contact */}
