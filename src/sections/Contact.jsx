@@ -9,11 +9,24 @@ const Contact = () => {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the form from refreshing the page
+    const formData = new FormData(e.target); // Collect form data
+
+    // Send the form data to Netlify or other backend
+    const response = await fetch("/", {
+      method: "POST",
+      body: formData,
+    });
+
+    // Handle response from backend
+    if (response.ok) {
+      setFormSubmitted(true); // Show success message
+    } else {
+      alert("There was an issue submitting your form. Please try again.");
+    }
   };
-  
+
  
   return (
 
@@ -40,7 +53,7 @@ const Contact = () => {
               <h2 className="text-xl font-semibold">Message Sent Successfully!</h2>
               <p>Thank you for reaching out. I will get back to you soon.</p>
               <a href="/">
-                <Button label="Back to Site" />
+                <Button label="Back" />
               </a>
             </div>
           ) : (
