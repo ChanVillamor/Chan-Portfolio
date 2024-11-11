@@ -10,23 +10,24 @@ const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent the form from refreshing the page
-    const formData = new FormData(e.target); // Collect form data
+    e.preventDefault();
+    const formData = new FormData(e.target);
 
-    // Send the form data to Netlify or other backend
     const response = await fetch("/", {
       method: "POST",
       body: formData,
     });
 
-    // Handle response from backend
     if (response.ok) {
-      setFormSubmitted(true); // Show success message
+      setFormSubmitted(true);
     } else {
       alert("There was an issue submitting your form. Please try again.");
     }
   };
 
+  const handleCloseModal = () => {
+    setFormSubmitted(false); // Close modal
+  };
  
   return (
 
@@ -41,20 +42,24 @@ const Contact = () => {
       >
 
 
-        {/* Contact Form */}
-        <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center mt-6">
+         {/* Contact Form */}
+         <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center mt-6">
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Contact Me</h1>
             <span className="block bg-green-950 rounded w-[160px] h-[4px] md:w-[305px] lg:w-[305px] mt-1"></span>
           </div>
 
           {formSubmitted ? (
-            <div className="text-center">
-              <h2 className="text-xl font-semibold">Message Sent Successfully!</h2>
-              <p>Thank you for reaching out. I will get back to you soon.</p>
-              <a href="/">
-                <Button label="Back" />
-              </a>
+            // Modal Component
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              <div className="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm mx-auto">
+                <h2 className="text-xl font-semibold">Message Sent Successfully!</h2>
+                <p className="mt-2">Thank you for reaching out. I will get back to you soon.</p>
+                <button onClick={handleCloseModal} className="flex items-center mt-4 text-green-600 hover:text-green-800">
+                  <FaArrowLeft className="mr-2" /> {/* Arrow Icon */}
+                  Back
+                </button>
+              </div>
             </div>
           ) : (
             <form
@@ -66,39 +71,20 @@ const Contact = () => {
             >
               <input type="hidden" name="form-name" value="contact" />
 
+              {/* Form Fields */}
               <div className="flex flex-col gap-4">
                 <label htmlFor="name" className="text-lg font-normal">Your Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                  className="p-3 border rounded-lg text-primary text-sm"
-                />
+                <input type="text" id="name" name="name" required className="p-3 border rounded-lg text-primary text-sm" />
               </div>
 
               <div className="flex flex-col gap-4">
                 <label htmlFor="email" className="text-lg font-normal">Your Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                  className="p-3 border rounded-lg text-primary text-sm"
-                />
+                <input type="email" id="email" name="email" required className="p-3 border rounded-lg text-primary text-sm" />
               </div>
 
               <div className="flex flex-col gap-4">
                 <label htmlFor="message" className="text-lg font-normal">Your Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Enter your message"
-                  required
-                  className="p-3 border rounded-lg text-primary text-sm"
-                />
+                <textarea id="message" name="message" required className="p-3 border rounded-lg text-primary text-sm" />
               </div>
 
               <Button type="submit" label="Send Message" fullWidth />
@@ -106,8 +92,6 @@ const Contact = () => {
           )}
         </div>
 
-
-        
         {/* personal info contact */}
         <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center">
           <div className='text-poppins'>

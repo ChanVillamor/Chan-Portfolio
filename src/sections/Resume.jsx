@@ -76,8 +76,8 @@ const Resume = () => {
 
           {/* Design Tools Section */}
           <div className="w-full max-w-lg mx-auto">
-            <h1 className="text-2xl md:text-4 xl lg:text-4xl font-bold tracking-wider">DESIGN TOOLS</h1>
-            <span className="block bg-green-950 rounded w-[185px] h-[4px] md:w-[370px] lg:w-[370px] mt-1"></span>
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">DESIGN TOOLS</h1>
+            <span className="block bg-green-950 rounded w-[185px] h-[4px] md:w-[190px] lg:w-[370px] mt-1"></span>
             <p className="text-gray text-base font-extralight tracking-wider mt-1">Still on my journey, continuously learning and growing.</p>
             <ul className="flex flex-wrap gap-8 md:gap-14 lg:gap-14 mt-8">
               {tools.map((item, index) => (

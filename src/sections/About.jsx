@@ -16,7 +16,7 @@ const About = () => {
   >
   
     {/* About Me Section */}
-    <div className="flex flex-col gap- lg:flex-row lg:gap-20 items-start">
+    <div className="flex flex-col gap-8 lg:flex-row lg:gap-20 items-start">
 
       {/* About Me Info */}
       <div className="flex flex-col items-start">
