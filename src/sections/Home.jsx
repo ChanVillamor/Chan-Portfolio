@@ -7,10 +7,10 @@ import { motion } from 'framer-motion';
 const Home = () => {
   return (
 
-    <section id="home" className='w-full flex flex-col justify-center items-center text-center min-h-screen container pt-20 text-dirty-white font-poppins'>
+    <section id="home" className='w-full flex flex-col justify-center items-center text-center min-h-screen pt-20 text-dirty-white font-poppins'>
 
       <motion.div 
-        className="flex flex-col gap-10 md:gap-14 lg:gap-16 items-center"
+        className="flex flex-col gap-10 md:gap-14 lg:gap-16 items-center container mx-auto"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 'some' }}  // Only needs part of the element to trigger

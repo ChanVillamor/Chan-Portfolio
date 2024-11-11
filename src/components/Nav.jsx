@@ -16,7 +16,7 @@ const Nav = () => {
   return (
    
       <header className="absolute z-30 w-full top-0 left-0 padding">
-         <nav className="flex justify-between items-center gap-16 container lg:padding">
+         <nav className="flex justify-between items-center gap-16 container mx-auto lg:padding">
             <a href="/">
                <img 
                   src={headerLogo} 

@@ -30,7 +30,7 @@ const Contact = () => {
  
   return (
 
-    <section id="contact" className='w-full flex flex-col justify-center items-start container pt-16 pb-16 text-dirty-white font-poppins'>
+    <section id="contact" className='w-full flex flex-col justify-center items-center pt-16 pb-16 text-dirty-white font-poppins'>
 
       <motion.div
         className="w-full flex flex-col justify-start gap-12 md:gap-20 lg:gap-20"
