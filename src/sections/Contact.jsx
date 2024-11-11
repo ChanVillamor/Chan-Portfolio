@@ -52,8 +52,8 @@ const Contact = () => {
 
           {formSubmitted ? (
             // Modal Component
-            <div className="fixed flex items-center justify-center">
-              <div className="bg-dirty-white text-primary p-8 rounded-lg shadow-lg text-center max-w-sm mx-auto">
+            <div className="fixed inset-0 flex items-center justify-center">
+              <div className="bg-primary text-dirty-white p-8 rounded-lg shadow-lg text-center max-w-sm mx-auto">
                 <h2 className="text-xl font-semibold">Message Sent Successfully!</h2>
                 <p className="mt-2">Thank you for reaching out. I will get back to you soon.</p>
                 <button onClick={handleCloseModal} className="flex items-center mt-4 text-primary hover:text-green-800">
