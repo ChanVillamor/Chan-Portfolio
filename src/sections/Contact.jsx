@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaArrowLeft } from 'react-icons/fa';
 import { FaXTwitter, FaPhoneVolume, FaLocationDot } from "react-icons/fa6";
 import { IoMailUnread } from "react-icons/io5";
 import { motion } from 'framer-motion';
