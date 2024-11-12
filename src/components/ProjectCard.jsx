@@ -14,7 +14,7 @@ const ProjectCard = ({ image, title, description, githubLink, demoLink }) => {
             backgroundColor="bg-[rgba(232,223,202,0.2)]"
             textColor="text-primary"
             textSize='text-sm'
-            borderColor="border-primary"
+            borderColor="border-blue-700"
           />
           <Button
             label="Demo"
@@ -22,7 +22,7 @@ const ProjectCard = ({ image, title, description, githubLink, demoLink }) => {
             backgroundColor="bg-[rgba(232,223,202,0.2)]"
             textColor="text-primary"
             textSize='text-sm'
-            borderColor="border-blue-500"
+            borderColor="border-red-700"
           />
         </div>
       </div>

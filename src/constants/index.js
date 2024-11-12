@@ -88,23 +88,23 @@ export const certificates = [
 // projects
 export const projects = [
    {
-     image: restaurant, // Replace with actual image URL
+     image: restaurant, 
      title: 'Restaurant Web Page',
      description: 'A sleek, restaurant reservation webpage built on the front end using HTML, CSS, and JavaScript.',
      githubLink: 'https://github.com/chanvillamor/Restaurant-web-page',
      demoLink: 'https://chanvillamor.github.io/Restaurant-web-page/',
    },
    {
-      image: calculator, // Replace with actual image URL    
+      image: calculator, 
       title: 'Simple Calculator',
       description: 'A straightforward calculator built with JavaScript, offering essential functions for basic arithmetic operations.',
       githubLink: 'https://github.com/ChanVillamor/Simple-Calculator',
       demoLink: 'https://chanvillamor.github.io/Simple-Calculator/',
     },
    {
-   image: quote, // Replace with actual image URL   
+   image: quote,
    title: 'Quote Generator',
-   description: 'A JavaScript-powered web-based quote generator that uses an array list to display inspiring quotes.',
+   description: 'A JavaScript-powered web-based quote generator that uses an array to display inspiring quotes.',
    githubLink: 'https://github.com/ChanVillamor/learning-DOM---JS/tree/main/PR1%20Quote%20generator%20js',
    demoLink: 'https://chanvillamor.github.io/learning-DOM---JS/PR1%20Quote%20generator%20js/',
    },

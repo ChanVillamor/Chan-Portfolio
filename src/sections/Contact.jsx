@@ -47,7 +47,7 @@ const Contact = () => {
          <div className="flex flex-col gap-8 md:gap-16 lg:gap-16 items-center mt-6">
           <div>
             <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold tracking-wider">Contact Me</h1>
-            <span className="block bg-green-950 rounded w-[160px] h-[4px] md:w-[305px] lg:w-[305px] mt-1"></span>
+            <span className="block bg-green-950 rounded w-[155px] h-[4px] md:w-[305px] lg:w-[305px] mt-1"></span>
           </div>
 
           {formSubmitted ? (
